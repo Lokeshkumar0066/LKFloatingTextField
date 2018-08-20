@@ -60,7 +60,7 @@
 - (void)setUpTextView{
     // Text Alignment
     [self setTextAlignment:NSTextAlignmentLeft];
-        
+    
     // Remove suggestion's
     self.autocorrectionType = UITextAutocorrectionTypeNo;
     
@@ -69,7 +69,7 @@
     
     // Add Insets
     self.textContainerInset = UIEdgeInsetsMake(15.0, -5.0f, 0.0f, 5.0f);
-
+    
 }
 
 - (void)setUpLabel{
@@ -84,9 +84,9 @@
     [super layoutSubviews];
     self.activeLbl.text = self.placeholder;
     if (self.text.length > 0) {
-        self.activeLbl.textColor = self.activePlaceholderColor;
+        self.activeLbl.textColor = (self.activePlaceholderColor)?self.activePlaceholderColor:[UIColor whiteColor];
     }else{
-        self.activeLbl.textColor = self.placeholderColor;
+        self.activeLbl.textColor = (self.placeholderColor)?self.placeholderColor:[UIColor whiteColor];
     }
     self.activeLbl.font = self.placeholderFont;
 }
@@ -113,7 +113,7 @@
     if (animationType == UITextViewAnimationTypeShow) {
         [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.activeLbl.frame = CGRectMake(0, 0, self.frame.size.width - 20, 12);
-            self.activeLbl.textColor = self.activePlaceholderColor;
+            self.activeLbl.textColor = (self.activePlaceholderColor)?self.activePlaceholderColor:[UIColor whiteColor];
             self.activeLbl.font = [UIFont boldSystemFontOfSize:10.0f];
         } completion:^(BOOL finished) {
             
@@ -121,7 +121,7 @@
     }else if (animationType == UITextViewAnimationTypeHide){
         [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.activeLbl.frame = CGRectMake(0, 15, self.frame.size.width - 20, 12);
-            self.activeLbl.textColor = self.placeholderColor;
+            self.activeLbl.textColor = (self.placeholderColor)?self.placeholderColor:[UIColor whiteColor];
             self.activeLbl.font = self.font;
         } completion:^(BOOL finished) {
         }];

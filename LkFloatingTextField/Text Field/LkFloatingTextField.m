@@ -82,8 +82,8 @@
 #pragma mark IBInspectable Calls
 -(void)layoutSubviews{
     [super layoutSubviews];
-    self.activeLbl.textColor = self.activeLabelColor;
-    [self setAttributedPlaceholder:self.placeholderColor textfield:self];
+    self.activeLbl.textColor = (self.activeLabelColor)?self.activeLabelColor:[UIColor whiteColor];
+    [self setAttributedPlaceholder:(self.placeholderColor)?self.placeholderColor:[UIColor whiteColor] textfield:self];
 }
 
 
