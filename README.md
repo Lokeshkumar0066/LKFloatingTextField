@@ -1,7 +1,25 @@
 # LKFloatingTextField
 
+Enter a text in UITextField, it displays the placeholder as a subject.
+
 ![floating](https://user-images.githubusercontent.com/26429027/44324354-0a8ce400-a473-11e8-9070-e75231680d07.gif)
 
+
+## Installation
+
+Just drag LKFloatingTextField Library and import the classes.
+
+## Customize
+### Use IBInspectable
+
+
+## Usage
+Insert 'RaisePlaceholder' in your UITextField custom class.
+
+
+
+
+## Use Code
 
     self.txtFieldOne.activeLabelColor = [UIColor whiteColor];                                                         
     self.txtFieldTwo.activeLabelColor = [UIColor whiteColor];                                                         
