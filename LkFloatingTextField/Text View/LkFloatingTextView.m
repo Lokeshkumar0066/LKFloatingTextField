@@ -88,7 +88,7 @@
     }else{
         self.activeLbl.textColor = (self.placeholderColor)?self.placeholderColor:[UIColor whiteColor];
     }
-    self.activeLbl.font = self.placeholderFont;
+    self.activeLbl.font = (self.placeholderFont)?self.placeholderFont:[UIFont fontWithName:@"Times New Roman" size:16.0];
 }
 
 
