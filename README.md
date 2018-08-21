@@ -11,6 +11,14 @@ Just drag LKFloatingTextField Library and import the classes.
 
 ## Customize
 ### Use IBInspectable
+#### UITextField
+
+
+
+
+#### UITextView
+
+
 
 
 ## Usage
